@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "Events"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date_end": {
+      "type": "date"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "visible": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "format": {
+      "type": "enumeration",
+      "enum": [
+        "digitaltag",
+        "fireside_chat",
+        "flohmarkt",
+        "hackathon",
+        "conference",
+        "konsultation",
+        "course",
+        "meetup",
+        "panel_talk",
+        "presentation",
+        "roundtable",
+        "screening",
+        "seminar",
+        "game",
+        "consultation",
+        "toa_satellite_event",
+        "videoscreening"
+      ]
+    },
+    "time_start": {
+      "type": "time"
+    },
+    "time_end": {
+      "type": "time"
+    },
+    "date_start": {
+      "type": "date"
+    },
+    "address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.address"
+    },
+    "organiser": {
+      "type": "string"
+    },
+    "registerInfo": {
+      "type": "string"
+    },
+    "registerLink": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    }
+  }
+}

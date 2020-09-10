@@ -1,0 +1,35 @@
+version: "3"
+services:
+  strapi:
+    container_name: strapi
+    image: strapi/strapi:3.1.3-node12
+    # image: strapi/strapi:3.1.3-node12-alpine
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: strapi
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: $POSTGRES_USER
+      DATABASE_PASSWORD: $POSTGRES_PASSWORD
+    links:
+      - postgres:postgres
+    volumes:
+      - ./app:/srv/app
+      # makes sure the node_modules folder is not included
+      # into the image. We could also use .dockerignore?
+      - /srv/app/node_modules/
+    ports:
+      - "1337:1337"
+
+  postgres:
+    container_name: strapi-pg-db
+    image: postgres:11.8
+    environment:
+      POSTGRES_DB: strapi
+      # should be defined in .env file
+      POSTGRES_USER: $POSTGRES_USER
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"

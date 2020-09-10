@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_common_addresses",
+  "info": {
+    "name": "Address",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "mail": {
+      "type": "email"
+    },
+    "street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}
