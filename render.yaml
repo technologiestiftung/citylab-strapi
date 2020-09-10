@@ -7,6 +7,8 @@ services:
     startCommand: npm start
     healthCheckPath: /
     envVars:
+      - key: NODE_ENV
+        value: production
       - key: NODE_VERSION
         value: v14.8.0
       - key: DATABASE_CLIENT
@@ -29,6 +31,10 @@ services:
         fromDatabase:
           name: strapidb
           property: password
+      - key: DATABASE_NAME
+        fromDatabase:
+          name: strapidb
+          property: database
 databases:
   - name: strapidb
     databaseName: strapi
