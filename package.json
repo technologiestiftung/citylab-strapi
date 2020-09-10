@@ -10,6 +10,7 @@
     "strapi": "strapi"
   },
   "devDependencies": {
+    "@inpyjamas/scripts": "0.1.7-alpha",
     "sync-dotenv": "2.6.2"
   },
   "dependencies": {
