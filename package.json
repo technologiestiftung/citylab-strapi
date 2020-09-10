@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "description": "cms for citylab deployed to render.com",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync:dotenv": "sync-dotenv && sync-dotenv --env app/.env --sample app/.env.example"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/technologiestiftung/citylab-strapi/issues"
   },
-  "homepage": "https://github.com/technologiestiftung/citylab-strapi#readme"
+  "homepage": "https://github.com/technologiestiftung/citylab-strapi#readme",
+  "devDependencies": {
+    "@inpyjamas/scripts": "0.1.7-alpha",
+    "sync-dotenv": "2.6.2"
+  }
 }
