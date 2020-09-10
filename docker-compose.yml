@@ -14,7 +14,7 @@ services:
     links:
       - postgres:postgres
     volumes:
-      - ./app:/srv/app
+      - .:/srv/app
       # makes sure the node_modules folder is not included
       # into the image. We could also use .dockerignore?
       - /srv/app/node_modules/
@@ -30,6 +30,6 @@ services:
       POSTGRES_USER: $POSTGRES_USER
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - ./pg-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"

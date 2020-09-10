@@ -1,27 +1,40 @@
 {
-  "name": "@tsb/citylab-strapi",
+  "name": "app",
   "private": true,
-  "version": "0.0.1",
-  "description": "cms for citylab deployed to render.com",
+  "version": "0.1.0",
+  "description": "A Strapi application",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sync:dotenv": "sync-dotenv && sync-dotenv --env app/.env --sample app/.env.example"
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/technologiestiftung/citylab-strapi.git"
-  },
-  "keywords": [
-    "strapi"
-  ],
-  "author": "Fabian Morón Zirfas <fabianmoronzirfas@protonmail.ch> (https://fabianmoronzirfas.me)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/technologiestiftung/citylab-strapi/issues"
-  },
-  "homepage": "https://github.com/technologiestiftung/citylab-strapi#readme",
   "devDependencies": {
-    "@inpyjamas/scripts": "0.1.7-alpha",
     "sync-dotenv": "2.6.2"
-  }
+  },
+  "dependencies": {
+    "knex": "<0.20.0",
+    "pg": "8.3.3",
+    "strapi": "3.0.5",
+    "strapi-admin": "3.0.5",
+    "strapi-connector-bookshelf": "3.0.5",
+    "strapi-plugin-content-manager": "3.0.5",
+    "strapi-plugin-content-type-builder": "3.0.5",
+    "strapi-plugin-email": "3.0.5",
+    "strapi-plugin-graphql": "3.0.5",
+    "strapi-plugin-upload": "3.0.5",
+    "strapi-plugin-users-permissions": "3.0.5",
+    "strapi-utils": "3.0.5"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "48bd0135-61c6-4ca7-98d6-8e0a2ae0edd6"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }

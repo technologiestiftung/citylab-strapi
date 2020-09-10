@@ -1,0 +1,36 @@
+services:
+  - type: web
+    region: frankfurt
+    name: strapi
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: v14.8.0
+      - key: DATABASE_CLIENT
+        value: postgres
+      - key: DATABASE_NAME
+        value: strapi
+      - key: DATABASE_HOST
+        fromDatabase:
+          name: strapidb
+          property: host
+      - key: DATABASE_PORT
+        fromDatabase:
+          name: strapidb
+          property: port
+      - key: DATABASE_USERNAME
+        fromDatabase:
+          name: strapidb
+          property: user
+      - key: DATABASE_PASSWORD
+        fromDatabase:
+          name: strapidb
+          property: password
+databases:
+  - name: strapidb
+    databaseName: strapi
+    user: strapi
+    region: frankfurt
