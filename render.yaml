@@ -35,6 +35,8 @@ services:
         fromDatabase:
           name: strapidb
           property: database
+      - key: ADMIN_JWT_SECRET
+        sync: false
 databases:
   - name: strapidb
     databaseName: strapi

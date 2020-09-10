@@ -11,6 +11,7 @@ services:
       DATABASE_PORT: 5432
       DATABASE_USERNAME: $POSTGRES_USER
       DATABASE_PASSWORD: $POSTGRES_PASSWORD
+      ADMIN_JWT_SECRET: $ADMIN_JWT_SECRET
     links:
       - postgres:postgres
     volumes:
