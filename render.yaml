@@ -3,7 +3,7 @@ services:
     region: frankfurt
     name: strapi
     env: node
-    buildCommand: npm run build
+    buildCommand: npm ci && npm run build
     startCommand: npm start
     healthCheckPath: /
     envVars:
