@@ -6,6 +6,7 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
+    "prebuild": "mkdir -p public/uploads",
     "build": "strapi build",
     "strapi": "strapi",
     "sync-dotenv": "sync-dotenv"
