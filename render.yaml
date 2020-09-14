@@ -6,11 +6,15 @@ services:
     buildCommand: npm ci && npm run build
     startCommand: npm start
     healthCheckPath: /
+    disk:
+      name: Strapi Public
+      mountPath: /project/src/public
+      sizeGB: 10
     envVars:
       - key: NODE_ENV
         value: production
       - key: NODE_VERSION
-        value: v14.8.0
+        value: v12.18.3
       - key: DATABASE_CLIENT
         value: postgres
       - key: DATABASE_HOST
