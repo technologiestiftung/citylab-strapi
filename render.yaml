@@ -7,8 +7,8 @@ services:
     startCommand: npm start
     healthCheckPath: /
     disk:
-      name: Strapi Public
-      mountPath: /project/src/public
+      name: Strapi Source
+      mountPath: /project/src
       sizeGB: 10
     envVars:
       - key: NODE_ENV
